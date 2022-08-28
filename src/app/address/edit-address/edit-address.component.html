@@ -1,0 +1,32 @@
+<h1>Hello Himanshu</h1>
+<form [formGroup]="editForm" (ngSubmit)="editData()">
+   <label for="fname">FirstName</label><br>
+   <input type="text" id="fname" formControlName="fname" [(ngModel)]="dataGetFromAddressList.fname"><br> 
+
+   <label for="lname">LastName</label><br>
+   <input type="text" id="lname" formControlName="lname" [(ngModel)]="dataGetFromAddressList.lname"><br>
+
+   <label for="companyName">Company Name</label><br>
+   <input type="text" id="companyName" formControlName="companyName" [(ngModel)]="dataGetFromAddressList.companyName"><br>
+
+   <label for="country">Country</label><br>
+   <input type="text" id="country" formControlName="country" [(ngModel)]="dataGetFromAddressList.country"><br>
+
+   <label for="streetAdress">Street Address</label><br>
+   <input type="text" id="streetAdress" formControlName="streetAdress" [(ngModel)]="dataGetFromAddressList.streetAdress"><br>
+
+   <label for="postcode">postcode/zip</label><br>
+   <input type="number" id="postcode" formControlName="postcode" [(ngModel)]="dataGetFromAddressList.postcode"><br>
+
+   <label for="town">Town/City</label><br>
+   <input type="text" id="town" formControlName="town" [(ngModel)]="dataGetFromAddressList.town"><br>
+
+   <label for="state">State</label><br>
+   <input type="text" id="state" formControlName="state" [(ngModel)]="dataGetFromAddressList.state"><br>
+
+   <label for="phone">Phone</label><br>
+   <input type="number" id="phone" formControlName="phone" [(ngModel)]="dataGetFromAddressList.phone"><br><br>
+
+   <button type="submit" [disabled]="editForm.invalid">Update data</button>
+  <button type="submit" (click)="moveToAddressList()">Cancle</button> 
+</form>

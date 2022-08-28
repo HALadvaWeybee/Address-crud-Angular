@@ -1,0 +1,125 @@
+<!-- <form [formGroup]="form" (ngSubmit)="submitData()" *ngIf="editOnData.id==null">
+    <label for="fname">FirstName</label><br />
+    <input type="text" id="fname" formControlName="fname" /><br />
+
+    <label for="lname">LastName</label><br />
+    <input type="text" id="lname" formControlName="lname" /><br />
+
+    <label for="companyName">Company Name</label><br />
+    <input type="text" id="companyName" formControlName="companyName" /><br />
+
+    <label for="country">Country</label><br />
+    <input type="text" id="country" formControlName="country" /><br />
+
+    <label for="streetAdress">Street Address</label><br />
+    <input type="text" id="streetAdress" formControlName="streetAdress" /><br />
+
+    <label for="postcode">postcode/zip</label><br />
+    <input type="number" id="postcode" formControlName="postcode" /><br />
+
+    <label for="town">Town/City</label><br />
+    <input type="text" id="town" formControlName="town" /><br />
+
+    <label for="state">State</label><br />
+    <input type="text" id="state" formControlName="state" /><br />
+
+    <label for="phone">Phone</label><br />
+    <input type="number" id="phone" formControlName="phone" /><br /><br />
+    <button type="submit" [disabled]="form.invalid">submit data</button>
+  <button type="submit" (click)="moveToAddressList()">Cancle</button>
+</form> -->
+
+<form [formGroup]="form" (ngSubmit)="submitData()">   
+  <label for="fname">FirstName</label><br>
+  <input type="text" id="fname" formControlName="fname"><br> 
+
+  <label for="lname">LastName</label><br>
+  <input type="text" id="lname" formControlName="lname"><br>
+
+  <label for="companyName">Company Name</label><br>
+  <input type="text" id="companyName" formControlName="companyName"><br>
+
+  <label for="country">Country</label><br>
+  <input type="text" id="country" formControlName="country"><br>
+
+  <label for="streetAdress">Street Address</label><br>
+  <input type="text" id="streetAdress" formControlName="streetAdress"><br>
+
+  <label for="postcode">postcode/zip</label><br>
+  <input type="number" id="postcode" formControlName="postcode"><br>
+
+  <label for="town">Town/City</label><br>
+  <input type="text" id="town" formControlName="town"><br>          
+
+  <label for="state">State</label><br>
+  <input type="text" id="state" formControlName="state"><br>
+
+  <label for="phone">Phone</label><br>
+  <input type="number" id="phone" formControlName="phone"><br><br>
+
+  <button type="submit" [disabled]="form.invalid">submit data</button>
+  <button type="submit" (click)="moveToAddressList()">Cancle</button>
+</form> 
+<!-- <form [formGroup]="form" (ngSubmit)="submitData()">
+  <div class="data--1" *ngIf="editOnData.id==null">
+    <label for="fname">FirstName</label><br />
+    <input type="text" id="fname" formControlName="fname" /><br />
+
+    <label for="lname">LastName</label><br />
+    <input type="text" id="lname" formControlName="lname" /><br />
+
+    <label for="companyName">Company Name</label><br />
+    <input type="text" id="companyName" formControlName="companyName" /><br />
+
+    <label for="country">Country</label><br />
+    <input type="text" id="country" formControlName="country" /><br />
+
+    <label for="streetAdress">Street Address</label><br />
+    <input type="text" id="streetAdress" formControlName="streetAdress" /><br />
+
+    <label for="postcode">postcode/zip</label><br />
+    <input type="number" id="postcode" formControlName="postcode" /><br />
+
+    <label for="town">Town/City</label><br />
+    <input type="text" id="town" formControlName="town" /><br />
+
+    <label for="state">State</label><br />
+    <input type="text" id="state" formControlName="state" /><br />
+
+    <label for="phone">Phone</label><br />
+    <input type="number" id="phone" formControlName="phone" /><br /><br />
+    <button type="submit" [disabled]="form.invalid">submit data</button>
+  </div>
+  <div class="data--2" *ngIf="editOnData.id!==null">
+   <label for="fname">FirstName</label><br>
+   <input type="text" id="fname" formControlName="fname" [(ngModel)]="editOnData.fname"><br> 
+
+   <label for="lname">LastName</label><br>
+   <input type="text" id="lname" formControlName="lname" [(ngModel)]="editOnData.lname"><br>
+
+   <label for="companyName">Company Name</label><br>
+   <input type="text" id="companyName" formControlName="companyName" [(ngModel)]="editOnData.companyName"><br>
+
+   <label for="country">Country</label><br>
+   <input type="text" id="country" formControlName="country" [(ngModel)]="editOnData.country"><br>
+
+   <label for="streetAdress">Street Address</label><br>
+   <input type="text" id="streetAdress" formControlName="streetAdress" [(ngModel)]="editOnData.streetAdress"><br>
+
+   <label for="postcode">postcode/zip</label><br>
+   <input type="number" id="postcode" formControlName="postcode" [(ngModel)]="editOnData.postcode"><br>
+
+   <label for="town">Town/City</label><br>
+   <input type="text" id="town" formControlName="town" [(ngModel)]="editOnData.town"><br>
+
+   <label for="state">State</label><br>
+   <input type="text" id="state" formControlName="state" [(ngModel)]="editOnData.state"><br>
+
+   <label for="phone">Phone</label><br>
+   <input type="number" id="phone" formControlName="phone" [(ngModel)]="editOnData.phone"><br><br>
+
+   <button type="submit" [disabled]="form.invalid">Update data</button>
+  </div>
+  <button type="submit" (click)="moveToAddressList()">Cancle</button>
+</form>
+ -->
