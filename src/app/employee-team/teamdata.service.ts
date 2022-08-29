@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Team } from './team';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,8 @@ export class TeamdataService {
   
   teamArray:Team[] = [];
   editObject:any= {};
+  editForm:Team;
+  
   addDataInLocalStorage(form: Team) {
      console.log("myForm", form);
      this.teamArray.push({

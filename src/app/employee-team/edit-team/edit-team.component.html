@@ -4,14 +4,13 @@
 
     <h2>Employees in team</h2>
     <div formArrayName="employees">
-        <ul *ngFor="let item of editForm.get('employees')['controls'];let i = index; let d" formGroupName="{{i}}">
+        <ul *ngFor="let item of editForm.get('employees')['controls'];let i = index;" formGroupName="{{i}}">
             <li> 
                <label>Employee {{i+1}}: </label>
-               <input type="text" id="employee" formControlName="employee" [(ngModel)]="employeeArr[i].employee">&nbsp;
+               <input type="text" id="employee" formControlName="employee">&nbsp;
                <button (click)="removeEmployee(i)">Delete</button>
             </li>
          </ul>
-         <!-- raised issue  -->
         <a (click)="addEmployee()">Add</a>
     </div>
     <br>
