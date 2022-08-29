@@ -25,8 +25,6 @@ export class AddressListComponent implements OnInit {
   }
 
   onEdit(id: number) {
-    console.log('id: ', id);
-
     this.addressdataService.getAdressInService(id);
     this.router.navigate(['edit', id]);
   }

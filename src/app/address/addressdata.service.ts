@@ -34,7 +34,6 @@ export class AddressdataService  {
   }
 
   getAdressInService(id:number) {
-     console.log('editAdressInService', id);
      const arr = this.addressArray.filter((ele) => ele.id === id);
      this.editObject = {
       id:arr[0].id,
@@ -51,9 +50,7 @@ export class AddressdataService  {
   }
 
   editDataInLocalStorage(id:number, editFormValue: AddressType) {
-   const index = this.addressArray.findIndex((ele) => ele.id === id);
-   console.log(index, id);
-   
+   const index = this.addressArray.findIndex((ele) => ele.id === id);   
    this.addressArray[index] = {id, ...editFormValue};
    this.upDateLocalStorage();
   } 

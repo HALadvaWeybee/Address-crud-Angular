@@ -18,15 +18,15 @@ export class AddAddressComponent implements OnInit {
   ngOnInit(): void{
 
      this.form = new FormGroup({
-        fname: new FormControl('', [Validators.required]),
-        lname: new FormControl('', [Validators.required]),
+        fname: new FormControl("", [Validators.required,Validators.pattern('[a-zA-Z]*')]),
+        lname: new FormControl('', [Validators.required,Validators.pattern('[a-zA-Z]*')]),
         companyName: new FormControl('', [Validators.required]),
-        country :new FormControl('', [Validators.required]),
+        country :new FormControl('', [Validators.required,Validators.pattern('[a-zA-Z]*')]),
         streetAdress:new FormControl('', [Validators.required]),
-        postcode:new FormControl('', [Validators.required]),
-        town:new FormControl('', [Validators.required]),
-        state:new FormControl('', [Validators.required]),
-        phone:new FormControl('', [Validators.required]),
+        postcode:new FormControl('', [Validators.required, Validators.minLength(6)]),
+        town:new FormControl('', [Validators.required,Validators.pattern('[a-zA-Z]*')]),
+        state:new FormControl('', [Validators.required,Validators.pattern('[a-zA-Z]*')]),
+        phone:new FormControl('', [Validators.required, Validators.minLength(13),Validators.pattern("^[0-9]*")]),
      })
   }
 
@@ -35,8 +35,32 @@ export class AddAddressComponent implements OnInit {
     this.router.navigate(['/addresslist']);
   }
 
-  get formCtrl() {
-    return this.form.controls;
+  get fname() {
+    return this.form.get('fname');
+  } 
+  get lname() {
+    return this.form.get('lname');
+  } 
+  get companyName() {
+    return this.form.get('companyName');
+  } 
+  get country() {
+    return this.form.get('country');
+  } 
+  get streetAdress() {
+    return this.form.get('streetAdress');
+  } 
+  get postcode() {
+    return this.form.get('postcode');
+  } 
+  get town() {
+    return this.form.get('town');
+  } 
+  get state() {
+    return this.form.get('state');
+  } 
+  get phone() {
+    return this.form.get('phone');
   } 
   
   moveToAddressList() {
