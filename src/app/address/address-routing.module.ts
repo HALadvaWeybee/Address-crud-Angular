@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', redirectTo:'addresslist', pathMatch:"full"},   
+  // {path: '', redirectTo:'addresslist', pathMatch:"full"},   
   {path: 'addresslist', component:AddressListComponent},
   {path: 'add', component: AddAddressComponent},
   {path: 'edit/:id', component: EditAddressComponent},
