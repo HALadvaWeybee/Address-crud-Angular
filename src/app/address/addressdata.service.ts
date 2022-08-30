@@ -57,6 +57,9 @@ export class AddressdataService  {
 
   deleteDataInLocalStorage(id:number) {
     this.addressArray = this.addressArray.filter((ele) => ele.id !== id);
+    this.addressArray.forEach((ele, index) => {
+      ele.id = index+1;
+    });
     this.upDateLocalStorage();
   }
 

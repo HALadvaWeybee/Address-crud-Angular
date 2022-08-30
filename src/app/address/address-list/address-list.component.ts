@@ -15,7 +15,6 @@ export class AddressListComponent implements OnInit {
   ) {}
 
   addressList: AddressType[] = [];
-  hello:boolean = false;
   ngOnInit(): void {
     this.addressList = this.addressdataService.addressArray;
   }

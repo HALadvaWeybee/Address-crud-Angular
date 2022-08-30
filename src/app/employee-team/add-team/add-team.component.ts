@@ -16,15 +16,22 @@ export class AddTeamComponent implements OnInit {
   teamForm:FormGroup;
   ngOnInit(): void {
     this.teamForm = new FormGroup({
-       teamName: new FormControl(''),
+       teamName: new FormControl('',[Validators.required, Validators.pattern('^[a-zA-Z]*')]),
        employees: new FormArray([
          new FormGroup({
-          employee: new FormControl('')
+          employee: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]*')])
          })
        ])
     });
   }
   
+  get teamName() {
+    return this.teamForm.get('teamName');
+  }
+  get employee():FormArray {
+    return this.teamForm.get('employees') as FormArray;
+  }
+
   addEmployee() {
     const control = <FormArray>this.teamForm.controls['employees'];
     control.push(

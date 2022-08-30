@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddressModule } from './address/address.module';
 import { EmployeeTeamModule } from './employee-team/employee-team.module';
+import { SchoolModule } from './school/school.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { EmployeeTeamModule } from './employee-team/employee-team.module';
     BrowserModule,
     AppRoutingModule,
     AddressModule,
-    EmployeeTeamModule
+    EmployeeTeamModule,
+    SchoolModule
   ],
   providers: [],
   bootstrap: [AppComponent]

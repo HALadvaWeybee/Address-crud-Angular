@@ -34,6 +34,14 @@ export class TeamdataService {
      }
   }
 
+  deleteDataInLocalStorage(id:number) {
+    this.teamArray = this.teamArray.filter(ele => ele.id != id);
+    this.teamArray.forEach((ele, index) => {
+      ele.id = index+1;
+    })
+    this.upDateInLocalStorage();
+  }
+  
   upDateInLocalStorage() {
     const lists = [];
     this.teamArray.forEach((ele) => {

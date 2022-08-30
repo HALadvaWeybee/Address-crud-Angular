@@ -26,4 +26,10 @@ export class ViewTeamComponent implements OnInit {
     this.teamDataService.getTeamDataInService(id);
     this.router.navigate(['teamemployee/edit', id]);
   }
+
+  deleteTeam(id:number) {
+    this.teamDataService.deleteDataInLocalStorage(id);
+    
+    this.ngOnInit();
+  }
 }
