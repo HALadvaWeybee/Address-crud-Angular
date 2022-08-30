@@ -41,7 +41,7 @@ export class AddClassComponent implements OnInit {
         name: new FormControl(''),
           rollNo: new FormControl(''),
           address: new FormControl(''),
-          phoneNo: new FormControl(''),
+          phoneNos: new FormControl(''),
       })
    )
   }

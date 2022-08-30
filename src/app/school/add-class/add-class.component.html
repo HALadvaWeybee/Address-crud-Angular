@@ -102,20 +102,20 @@
                 <input type="text" id="address" formControlName="address">&nbsp;
                 <button (click)="removeStudentDetail(i)">Delete</button>
             </li>
-            <li>
+            <!-- <li>
                 <label>Phone No: </label>
                 <input type="text" id="phoneNo" formControlName="phoneNo">&nbsp;
                 <button (click)="removeStudentDetail(i)">Delete</button>
-            </li>
-            <li formArrayName="phoneNos">
+            </li> -->
+            <!-- <li formArrayName="phoneNos">
                 <ul *ngFor="let nos of studentNumbers(i)?.controls; let j = index;" formGroupName="{{j}}">
                     <li>
                     </li>
                 </ul>
-                <!-- <label>Phone No: </label>
+                <label>Phone No: </label>
                 <input type="text" id="phoneNo" formControlName="phoneNo">&nbsp;
-                <button (click)="removeStudentDetail(i)">Delete</button>     -->
-            </li>
+                <button (click)="removeStudentDetail(i)">Delete</button>    
+            </li> -->
         </ul>
         <!-- raised issue  -->
         <a (click)="addClass()">Add</a>
